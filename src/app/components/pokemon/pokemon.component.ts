@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { PokemonService } from '../../.service/pokemon.service'
 
 @Component({
   selector: 'app-pokemon',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
   templateUrl: './pokemon.component.html',
   styleUrl: './pokemon.component.css'
 })
-export class PokemonComponent {
+export class PokemonComponent implements OnInit {
+  pokemonService = inject(PokemonService)
 
+  loadPokemon() {
+    this.pokemonService.getPokemon().subscribe((pokemon) => {
+      console.log(pokemon);
+    })
+  }
+
+  ngOnInit() {
+    this.loadPokemon();
+  }
 }

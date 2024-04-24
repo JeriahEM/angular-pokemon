@@ -37,10 +37,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 2. Displaying Data
     Data binfing - This allows us to use data from our class file insiode of our template
         Interpolation binding {{}} => this allows us to display yhe value of properties inside the template
+
+
 3. Components
     ng generates component ./components/pokemon
-    
+
 4. Routing 
+    
 6. Interfaces
 7. Passing data - Parent to clid& displaying fetched data
 8. Pipes
