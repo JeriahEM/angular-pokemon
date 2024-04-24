@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { IPokemon } from '../interfaces/ipokemon';
 const http = '';
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class PokemonService {
   //HttpClient is a class that allows us to preform Http requests (GET PST)
   http = inject(HttpClient)
 
-  getPokemon(userInput = 'bulbasaur') {
-    return this.http.get(`https://pokeapi.co/api/v2/pokemon/${userInput}`)
+  getPokemon(userInput = 'blaziken') {
+    return this.http.get<IPokemon>(`https://pokeapi.co/api/v2/pokemon/${userInput}`)
   }
 }

@@ -42,9 +42,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. Components
     ng generates component ./components/pokemon
 
-4. Routing 
-    
+4. Services and Fetching 
 6. Interfaces
+
+
 7. Passing data - Parent to clid& displaying fetched data
+
+
 8. Pipes
-0. User Input
+9. User Input
+10. Two-way binding
